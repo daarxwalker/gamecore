@@ -30,6 +30,7 @@ func New() Gamecore {
 func (c *gamecore) Module(moduleFn func(Module)) Gamecore {
 	m := createModule(c.control)
 	moduleFn(m)
+	m.initComponents()
 	c.modules = append(c.modules, m.getPtr())
 	return c
 }

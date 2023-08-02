@@ -18,7 +18,6 @@ func createModule(control *control) *module {
 		control:    control,
 		components: make([]Component, 0),
 	}
-	m.initComponents()
 	return m
 }
 
